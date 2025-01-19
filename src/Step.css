@@ -1,0 +1,288 @@
+.step-card {
+  width: 469px;
+  height: 695px;
+  background: #e8e8ff;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: 1rem;
+}
+
+.step-title {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #273042;
+  text-align: center;
+
+  margin: 40px 32px 24px;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.button-row {
+  position: absolute;
+  bottom: 40px;
+  left: 32px;
+  right: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn,
+.next-btn,
+.save-btn {
+  width: 170px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: #c6c9fc;
+  color: #ffffff;
+}
+
+.next-btn,
+.save-btn {
+  background-color: #3c42f6;
+  color: #ffffff;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-group {
+  margin-bottom: 16px;
+  width: 100%; /* input genişliği tam container kadar */
+}
+
+/* Tek satırlık input stili */
+.text-input {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f8f8fc;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #273042;
+  outline: none;
+}
+
+.text-input::placeholder {
+  color: #aaaaaa;
+  font-weight: 400;
+}
+
+/* Step2: Gün listesi */
+.days-list {
+  margin: 0 auto 32px auto;
+  width: 100%;
+  border-bottom: 1px solid #9b9beb;
+}
+
+.day-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8fc;
+  color: #273042;
+  font-size: 16px;
+  height: 49px;
+  line-height: 49px;
+  margin-bottom: -1px;
+  cursor: pointer;
+  padding: 0 16px;
+  border: 1px solid #9b9beb;
+}
+
+.day-row.disabled {
+  color: #aaaaaa;
+  cursor: default;
+}
+
+.day-row.selected {
+}
+
+.check-icon {
+  font-size: 18px;
+  color: #3c42f6;
+}
+
+.fitness-goal-box {
+  width: 100%;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #e2e2ee;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+/* Her satır */
+.fitness-goal-item {
+  position: relative;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  padding: 16px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.fitness-goal-item .left-part {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goal-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.goal-label {
+  font-size: 16px;
+  color: #273042;
+}
+
+/* Aradaki çizgi */
+.separator-line {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background-color: #9b9beb;
+}
+
+/* Custom radio dairesi */
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Seçili olduğunda mavi dolgu */
+.fitness-goal-item.selected .radio-circle {
+  border-color: #3c42f6;
+}
+
+.fitness-goal-item.selected .radio-circle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #3c42f6;
+  border-radius: 50%;
+}
+
+/* Radio group (opsiyonel) */
+.radio-group {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e2e2ee;
+  overflow: hidden;
+}
+
+.radio-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #e2e2ee;
+  position: relative;
+}
+
+.radio-label:last-child {
+  border-bottom: none;
+}
+
+.radio-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #273042;
+}
+
+.radio-left .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.radio-label.selected .radio-circle {
+  border-color: #3c42f6;
+}
+
+.radio-label.selected .radio-circle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #3c42f6;
+  border-radius: 50%;
+}
+
+.radio-label input[type='radio'] {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .step-card {
+    width: 100%;
+    height: auto;
+    padding: 24px 16px;
+  }
+
+  .button-row {
+    position: static;
+    margin-top: 24px;
+  }
+
+  .step-title {
+    font-size: 18px;
+    margin: 20px 26px 28px;
+  }
+
+  .card-content {
+    padding: 0px;
+  }
+
+  .back-btn,
+  .next-btn,
+  .save-btn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

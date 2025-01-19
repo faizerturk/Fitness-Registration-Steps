@@ -1,0 +1,62 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #1f1f1f;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Yukarıdaki justify-content: flex-start, kartı yukarı yerleştirir.
+     Tam dikey ortalamak isterseniz, center yapabilirsiniz. */
+}
+
+.header-bar {
+  width: 100%;
+  max-width: 469px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.lang-toggle-btn {
+  background: #e8e8ff;
+  border: 1px solid #e8e8ff;
+  color: rgb(127, 124, 124);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.step-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ltr {
+  direction: ltr;
+}
+.rtl {
+  direction: rtl;
+}

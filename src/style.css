@@ -1,0 +1,98 @@
+/* Örnek global stiller */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f7f7ff;
+  color: #333;
+}
+
+/* Uygulama ana kaplayıcı */
+.app-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+/* Adımlar konteyneri:
+   direction değişimine göre animasyonun sağdan-sola veya soldan-sağa yapılması. */
+.step-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  transition: transform 0.5s ease;
+}
+
+/* step bileşeni */
+.step {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Buton grubu */
+.btn-group {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #3f37c9;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4361ee;
+}
+
+/* Dil değiştirme butonu */
+.lang-switch {
+  background-color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Inputlar */
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* LTR / RTL için örnek */
+.app-container.ltr .step-container {
+  transform: translateX(0);
+}
+
+.app-container.rtl .step-container {
+  transform: translateX(0);
+  /* Farklı animasyonlar ekleyebilirsiniz */
+}
+
+/* Gün listeleme */
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Radio */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
