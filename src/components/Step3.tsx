@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from '../i18n/useTranslation';
 import { useStepData } from '../context/StepDataContext';
 
-// İkonlar
 import FireIcon from '../assets/IconFire.png';
 import LevelIcon from '../assets/IconLevel.png';
 import SmileIcon from '../assets/IconSmile.png';
@@ -66,7 +65,6 @@ const Step3: React.FC<Step3Props> = ({ onNext, onBack }) => {
                   <span className='goal-label'>{opt.label}</span>
                 </div>
 
-                {/* Sağda custom radio dairesi */}
                 <div className='radio-circle' />
 
                 <input
@@ -78,7 +76,6 @@ const Step3: React.FC<Step3Props> = ({ onNext, onBack }) => {
                   style={{ display: 'none' }}
                 />
 
-                {/* Aradaki yatay çizgi (son elemana koymuyoruz) */}
                 {!isLastItem && <div className='separator-line' />}
               </label>
             );

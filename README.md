@@ -37,6 +37,14 @@ Additional notes:
 ## How to Run
 
 1. **Install dependencies**:
-   ```bash
+   ```
    npm install
    ```
+
+## Start development server:
+
+```
+npm run dev
+```
+
+Visit http://localhost:5173 in your browser.

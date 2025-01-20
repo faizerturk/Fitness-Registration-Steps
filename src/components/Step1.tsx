@@ -33,7 +33,6 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
     <div className='step-card'>
       <h2 className='step-title'>{t('step1Title')}</h2>
 
-      {/* Ortadaki içerik */}
       <div className='card-content'>
         <div className='input-group'>
           <input
@@ -56,7 +55,6 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
       </div>
 
       <div className='button-row'>
-        {/* Step1'de Back butonu disabled */}
         <button className='back-btn disabled' disabled>
           {t('back')}
         </button>

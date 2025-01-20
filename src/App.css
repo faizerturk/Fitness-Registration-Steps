@@ -25,16 +25,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* Yukarıdaki justify-content: flex-start, kartı yukarı yerleştirir.
-     Tam dikey ortalamak isterseniz, center yapabilirsiniz. */
 }
 
 .header-bar {
   width: 100%;
-  max-width: 469px;
   display: flex;
   justify-content: flex-end;
-  padding: 16px;
 }
 
 .lang-toggle-btn {

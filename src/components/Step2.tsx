@@ -15,7 +15,6 @@ const Step2: React.FC<Step2Props> = ({ onNext, onBack }) => {
   const heightNum = parseFloat(stepData.height) || 1;
   const ratio = weightNum / heightNum;
 
-  // Tüm günler
   const allDays = [
     { key: 'monday', label: t('monday') },
     { key: 'tuesday', label: t('tuesday') },
@@ -26,7 +25,6 @@ const Step2: React.FC<Step2Props> = ({ onNext, onBack }) => {
     { key: 'sunday', label: t('sunday') },
   ];
 
-  // ratio>0.5 => Tuesday/Thursday disabled
   function isDayDisabled(dayKey: string) {
     if (ratio <= 0.5) return false;
     return dayKey === 'tuesday' || dayKey === 'thursday';
@@ -46,6 +44,11 @@ const Step2: React.FC<Step2Props> = ({ onNext, onBack }) => {
   };
 
   const isFormValid = stepData.selectedDays.length > 0;
+
+  const handleNext = () => {
+    if (!isFormValid) return;
+    onNext();
+  };
 
   return (
     <div className='step-card'>
@@ -82,7 +85,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onBack }) => {
           {t('back')}
         </button>
         <button
-          onClick={onNext}
+          onClick={handleNext}
           className={`next-btn ${!isFormValid ? 'disabled' : ''}`}
           disabled={!isFormValid}
         >
