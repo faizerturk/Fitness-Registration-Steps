@@ -41,7 +41,7 @@ const Step4: React.FC<Step4Props> = ({ onBack, onComplete }) => {
       <h2 className='step-title'>{t('step4Title')}</h2>
 
       <div className='card-content'>
-        <div className='input-group'>
+        <div className='input-group name-group'>
           <input
             className='text-input'
             type='text'
@@ -49,8 +49,6 @@ const Step4: React.FC<Step4Props> = ({ onBack, onComplete }) => {
             value={stepData.name}
             onChange={(e) => handleChange('name', e.target.value)}
           />
-        </div>
-        <div className='input-group'>
           <input
             className='text-input'
             type='text'
@@ -59,7 +57,8 @@ const Step4: React.FC<Step4Props> = ({ onBack, onComplete }) => {
             onChange={(e) => handleChange('surname', e.target.value)}
           />
         </div>
-        <div className='input-group'>
+
+        <div className='input-group email-group'>
           <input
             className='text-input'
             type='email'
@@ -67,8 +66,6 @@ const Step4: React.FC<Step4Props> = ({ onBack, onComplete }) => {
             value={stepData.email}
             onChange={(e) => handleChange('email', e.target.value)}
           />
-        </div>
-        <div className='input-group'>
           <input
             className='text-input'
             type='password'
